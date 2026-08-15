@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: employee-service
+  datasource:
+        url: jdbc:mysql://localhost:3306/msdb
+        username: root
+        password: Amma@1994
+        driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto : update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql : true
+server:
+  servlet:
+    context-path: /employee_app/api
+
+addressservice:
+  base:
+    url: http://localhost:8081/address_app/api
+
+eureka:
+  client:
+    fetch-registry: true
+  instance:
+        metadata-map:
+                  configPath: /address-app/api
+                  user : sai
+
+#address-service:
+#  ribbon:
+#    listOfServers=http://localhost:8081,http://localhost:8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+
+
