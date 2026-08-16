@@ -18,6 +18,9 @@ server:
   servlet:
     context-path: /address_app/api
 
+envName:
+  details: default
+  
 eureka:
   client:
     register-with-eureka: true
