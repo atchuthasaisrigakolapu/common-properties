@@ -27,6 +27,8 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
+    refresh:
+      enable: false
   instance:
         metadata-map:
                   configPath: /address-app/api
