@@ -13,6 +13,8 @@ spring:
     properties:
       hibernate:
         format_sql : true
+envName:
+  details: default
 server:
   servlet:
     context-path: /employee_app/api
