@@ -16,18 +16,26 @@ spring:
 server:
   servlet:
     context-path: /employee_app/api
-
+envName:
+  details: NewDevelopmentPurpose
 addressservice:
   base:
     url: http://localhost:8081/address_app/api
 
 eureka:
   client:
+    register-with-eureka: true
     fetch-registry: true
+    refresh:
+      enable: false
   instance:
         metadata-map:
                   configPath: /address-app/api
                   user : sai
+        hostname: localhost
+        instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: true
+
 
 #address-service:
 #  ribbon:
@@ -38,7 +46,6 @@ management:
     web:
       exposure:
         include: '*'
-
 
 
 
