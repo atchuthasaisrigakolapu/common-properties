@@ -20,11 +20,14 @@ server:
 
 eureka:
   client:
+    register-with-eureka: true
     fetch-registry: true
+    refresh:
+      enable: false
   instance:
-    hostname: localhost
-    instance-id: ${spring.application.name}:${server.port}
-    prefer-ip-address: true
+      hostname: localhost
+      instance-id: ${spring.application.name}:${server.port}
+      prefer-ip-address: true
 
 management:
   endpoints:
