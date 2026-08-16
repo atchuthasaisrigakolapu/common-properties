@@ -17,7 +17,7 @@ server:
   servlet:
     context-path: /employee_app/api
 envName:
-  details: Development
+  details: NewDevelopment
 addressservice:
   base:
     url: http://localhost:8081/address_app/api
