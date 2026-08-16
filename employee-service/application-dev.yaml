@@ -29,6 +29,10 @@ eureka:
         metadata-map:
                   configPath: /address-app/api
                   user : sai
+        hostname: localhost
+        instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: true
+
 
 #address-service:
 #  ribbon:
