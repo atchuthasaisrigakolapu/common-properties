@@ -42,6 +42,9 @@ eureka:
 #    listOfServers=http://localhost:8081,http://localhost:8082
 
 management:
+  endpoint:
+    env:
+      show-values: always
   endpoints:
     web:
       exposure:
